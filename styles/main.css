@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.container {
+  columns: 1;
+  padding: 32px;
+}
+@media (min-width: 500px) {
+  .container {
+    columns: 2;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    columns: 3;
+  }
+}
+@media (min-width: 980px) {
+  .container {
+    columns: 4;
+  }
+}
+@media (min-width: 1250px) {
+  .container {
+    columns: 5;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.card:link,
+.card:visited {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.card:hover,
+.card:active {
+  color: white;
+  background-color: #ed462f;
+  box-shadow: 0 1rem 2rem rgba(black, 0.4);
+  transform: rotate(5deg) scale(1.1);
+  padding: 2px;
+}
+
+.card-img {
+  width: 100%;
+  max-height: 500px;
+}
+
+.card-info {
+  display: flex;
+  font-size: 16px;
+  padding: 16px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-description-title {
+  font-size: 20px;
+}
+
+::selection {
+  user-select: none;
+}
